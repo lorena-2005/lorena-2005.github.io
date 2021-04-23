@@ -1,0 +1,81 @@
+<DOCTYPE html>
+    <html lang="es">
+        <head>
+            <title>
+                GRID
+            </title>
+            <meta charset="UTF-8">
+            <style>
+                .header {text-align: center;
+                        grid-area: header;
+                        }
+                .img1 {grid-area: img1;
+                        justify-self: center;}
+                .img2 {grid-area: img2;
+                        justify-self: center;}
+                .img3 {grid-area: img3;
+                        justify-self: center;}
+                .img4 {grid-area: img4;
+                        justify-self: center;}
+                .img5 {grid-area: img5;
+                        justify-self: center;}
+                .img6 {grid-area: img6;
+                        justify-self: center;}
+                .footer {grid-area: footer;}
+                .grid-container {display: grid;
+                            grid-template-areas: "header header header"
+                                                 "img1 img2 img3"
+                                                 "img4 img5 img6"
+                                                 "footer footer footer";
+                            background-color: rgb(240, 240, 107); }
+                .grid-container > div {background-image: linear-gradient(rgb(172, 144, 238), purple);
+                                    margin: 10px;}
+                img {width: 300px;
+                    height: 250px;
+                    transition: width 2s;}
+                img:hover {width: 400px;
+                            height:300px ;}
+                button {width: 100%;}
+                @media only screen and (max-width: 800px) {
+                    .grid-container {
+                            grid-template-areas:
+                                                 "img1 img2 "
+                                                 "img3 img4 "
+                                                 "img5 img6"
+                                                 ;
+                            background-color: rgb(240, 107, 107); }
+                    .header, .footer {display: none;}
+                } 
+            </style>
+        </head>
+        <body>
+            <div class="grid-container">
+                <div class="header" style="background-image: linear-gradient(pink,lightblue)">
+                    <h2>
+                        LORENA NICOLÁS GALLARDO
+                    </h2>
+                </div>
+                <div class="img1">
+                    <img src="img/descarga.jfif">
+                </div>
+                <div class="img2">
+                    <img src="img/descarga (1).jfif">
+                </div>
+                <div class="img3">
+                    <img src="img/descarga (2).jfif">
+                </div>
+                <div class="img4">
+                    <img src="img/descarga (3).jfif">
+                </div>
+                <div class="img5">
+                    <img src="img/descarga (4).jfif">
+                </div>
+                <div class="img6">
+                    <img src="img/descarga (5).jfif">
+                </div>
+                <div class="footer">
+                    <button onclick="alert ('NO ME PINCHES')">no</button>
+                </div>
+            </div>
+        </body>
+    </html>
